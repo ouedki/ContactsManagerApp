@@ -1,0 +1,76 @@
+<div class="container spacer">
+  <div *ngIf="mode==1">
+    <div class="card">
+      <div class="card-header bg-primary text-white">Edit Contact</div>
+      <div class="card-body">
+        <div class="form-group">
+          <div>
+            <label>First Name: </label>
+            <input class="form-control" required="" name="firstName" type="text" [(ngModel)]="contact.firstName">
+          </div>
+          <div>
+            <label>Last Name: </label>
+            <input class="form-control" required="" name="lastName" type="text" [(ngModel)]="contact.lastName">
+          </div>
+          <div>
+            <label>Email: </label>
+            <input class="form-control" required="" name="email" type="email" [(ngModel)]="contact.email">
+          </div>
+          <div>
+            <label>Phone Number: </label>
+            <input  class="form-control" required="" name="phone" type="text" [(ngModel)]="contact.phone">
+          </div>
+          <div>
+            <label>Data Of Birth: </label>
+            <input class="form-control" required="" name="dateOfBirth" type="date" [(ngModel)]="contact.dateOfBirth">
+          </div>
+          <div>
+            <label>Photo: </label>
+            <input class="form-control" required="" name="photo" type="text" [(ngModel)]="contact.photo">
+          </div>
+          <button class="btn btn-primary spacer" (click)="editContact()">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="mode==2">
+    <div class="card">
+      <div class="card-header bg-primary text-white">Confitmation of Added Contact</div>
+      <div class="card-body">
+        <div class="form-group">
+          <div>
+            <label>ID : </label>
+            <label><strong>{{contact.id}}</strong></label>
+          </div>
+          <div>
+            <label>First Name : </label>
+            <label><strong>{{contact.firstName}}</strong></label>
+          </div>
+          <div>
+            <label>Last Name : </label>
+            <label><strong>{{contact.lastName}}</strong></label>
+          </div>
+          <div>
+            <label>Email : </label>
+            <label><strong>{{contact.email}}</strong></label>
+          </div>
+          <div>
+            <label>Phone Number : </label>
+            <label><strong>{{contact.phone}}</strong></label>
+          </div>
+          <div>
+            <label>Data Of Birth : </label>
+            <label><strong>{{contact.dateOfBirth}}</strong></label>
+          </div>
+          <div>
+            <label>Photo : </label>
+            <label><strong>{{contact.photo}}</strong></label>
+          </div>
+          <button class="btn btn-primary spacer" (click)="goToSave()">Contacts</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
